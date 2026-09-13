@@ -1,0 +1,2434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>For Ankita 💛</title>
+
+<style>
+:root{
+  --pink:#ff6f91;
+  --peach:#ffb38a;
+  --lavender:#bca7ff;
+  --yellow:#ffd977;
+  --mint:#9bd7c7;
+  --dark:#2c2530;
+  --text:#514653;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color:var(--dark);
+
+  background:
+    radial-gradient(circle at 10% 10%,#ffd8cb 0,transparent 25%),
+    radial-gradient(circle at 90% 20%,#ded4ff 0,transparent 25%),
+    radial-gradient(circle at 70% 80%,#d7f3eb 0,transparent 25%),
+    linear-gradient(
+      135deg,
+      #fff9f6,
+      #fff7fb,
+      #f8f6ff
+    );
+
+  overflow-x:hidden;
+}
+
+/* =========================
+   FLOATING BACKGROUND
+========================= */
+
+.bg-orb{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(3px);
+  opacity:.45;
+  pointer-events:none;
+  animation:floatOrb 8s ease-in-out infinite;
+}
+
+.orb1{
+  width:140px;
+  height:140px;
+  background:#ffcbb9;
+  top:12%;
+  left:-60px;
+}
+
+.orb2{
+  width:180px;
+  height:180px;
+  background:#d9ceff;
+  right:-90px;
+  top:45%;
+  animation-delay:-2s;
+}
+
+.orb3{
+  width:100px;
+  height:100px;
+  background:#bce8dd;
+  left:8%;
+  bottom:8%;
+  animation-delay:-4s;
+}
+
+@keyframes floatOrb{
+  0%,100%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-22px);
+  }
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+  width:min(1050px,92%);
+  margin:auto;
+}
+
+section{
+  padding:75px 0;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.card{
+  background:rgba(255,255,255,.73);
+  border:1px solid rgba(255,255,255,.9);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-radius:30px;
+  box-shadow:
+    0 22px 60px
+    rgba(70,40,70,.12);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+}
+
+.hero-card{
+  padding:
+    clamp(28px,6vw,65px);
+  width:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+.small-title{
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-weight:900;
+  font-size:.72rem;
+  color:#8c7989;
+}
+
+h1{
+  font-size:
+    clamp(3rem,8vw,6.4rem);
+
+  line-height:.94;
+  margin:15px 0 22px;
+
+  letter-spacing:-.06em;
+}
+
+.gradient-text{
+  background:
+    linear-gradient(
+      90deg,
+      #ff5e88,
+      #ff9c72,
+      #9c80ea
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero-text{
+  max-width:760px;
+  font-size:
+    clamp(1.08rem,2vw,1.35rem);
+
+  line-height:1.7;
+  color:#655966;
+}
+
+.badge{
+  display:inline-block;
+  margin-top:18px;
+  padding:11px 16px;
+  border-radius:999px;
+  background:white;
+  font-weight:800;
+  box-shadow:
+    0 7px 20px
+    rgba(50,30,50,.08);
+}
+
+.button-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+
+button,
+.button{
+  border:none;
+  cursor:pointer;
+  border-radius:17px;
+  padding:14px 19px;
+  font-size:.95rem;
+  font-weight:850;
+  transition:
+    .2s transform,
+    .2s box-shadow;
+
+  text-decoration:none;
+}
+
+button:hover,
+.button:hover{
+  transform:
+    translateY(-3px);
+}
+
+.primary{
+  background:
+    linear-gradient(
+      135deg,
+      #ff7297,
+      #ffad7d
+    );
+
+  color:white;
+
+  box-shadow:
+    0 12px 25px
+    rgba(255,111,145,.25);
+}
+
+.secondary{
+  background:white;
+  color:#3b303d;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section{
+  text-align:center;
+}
+
+.countdown-title{
+  font-size:
+    clamp(2rem,5vw,3.7rem);
+
+  margin:0 0 10px;
+  letter-spacing:-.04em;
+}
+
+.countdown-subtitle{
+  color:#756a76;
+  margin-bottom:30px;
+}
+
+.clock{
+  display:grid;
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:15px;
+}
+
+.time-box{
+  padding:28px 10px;
+  border-radius:25px;
+  background:
+    rgba(255,255,255,.82);
+
+  box-shadow:
+    0 14px 32px
+    rgba(65,40,65,.1);
+
+  position:relative;
+  overflow:hidden;
+
+  animation:
+    pulseClock
+    3s ease-in-out infinite;
+}
+
+.time-box:nth-child(2){
+  animation-delay:.3s;
+}
+
+.time-box:nth-child(3){
+  animation-delay:.6s;
+}
+
+.time-box:nth-child(4){
+  animation-delay:.9s;
+}
+
+@keyframes pulseClock{
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-5px);
+  }
+}
+
+.time-number{
+  display:block;
+
+  font-size:
+    clamp(2rem,6vw,4.3rem);
+
+  font-weight:950;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff628c,
+      #9c80e8
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.time-label{
+  font-size:.78rem;
+  font-weight:800;
+  color:#8a7b88;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+/* =========================
+   SECTION TEXT
+========================= */
+
+.section-title{
+  font-size:
+    clamp(2.1rem,5vw,3.7rem);
+
+  margin:0 0 12px;
+  letter-spacing:-.045em;
+}
+
+.section-subtitle{
+  color:#756a76;
+  line-height:1.6;
+  margin-bottom:28px;
+}
+
+/* =========================
+   MOOD CARDS
+========================= */
+
+.moods{
+  display:grid;
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:15px;
+}
+
+.mood-card{
+  padding:24px;
+  min-height:180px;
+  cursor:pointer;
+
+  transition:
+    .2s transform,
+    .2s box-shadow;
+}
+
+.mood-card:hover{
+  transform:
+    translateY(-7px)
+    rotate(-.5deg);
+
+  box-shadow:
+    0 26px 55px
+    rgba(70,40,70,.16);
+}
+
+.mood-emoji{
+  font-size:2.3rem;
+}
+
+.mood-card h3{
+  margin:
+    17px 0 6px;
+}
+
+.mood-card p{
+  color:#786b77;
+  font-size:.9rem;
+  line-height:1.5;
+}
+
+.mood-response{
+  margin-top:18px;
+  padding:27px;
+}
+
+.mood-response-title{
+  font-size:
+    clamp(1.5rem,4vw,2.5rem);
+
+  font-weight:950;
+}
+
+.mood-response-text{
+  color:#655865;
+  line-height:1.7;
+}
+
+/* =========================
+   TWO COLUMN
+========================= */
+
+.two-grid{
+  display:grid;
+  grid-template-columns:
+    1.25fr .75fr;
+
+  gap:17px;
+}
+
+/* =========================
+   NOTE JAR
+========================= */
+
+.jar-area{
+  padding:38px;
+  text-align:center;
+}
+
+.jar{
+  width:210px;
+  height:250px;
+  margin:
+    25px auto;
+
+  border:
+    4px solid white;
+
+  border-radius:
+    30px 30px 60px 60px;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,.55),
+      rgba(255,255,255,.2)
+    );
+
+  box-shadow:
+    inset 0 0 30px
+    rgba(255,255,255,.7),
+    0 20px 35px
+    rgba(60,35,60,.1);
+
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  position:relative;
+
+  transition:
+    .25s transform;
+}
+
+.jar:hover{
+  transform:
+    rotate(-3deg)
+    scale(1.03);
+}
+
+.jar::before{
+  content:"";
+  position:absolute;
+  top:-21px;
+
+  width:150px;
+  height:30px;
+
+  background:#e8ad68;
+  border-radius:9px;
+}
+
+.jar-note{
+  width:130px;
+
+  padding:15px;
+
+  background:#fff0ad;
+
+  border-radius:12px;
+
+  font-weight:900;
+
+  transform:
+    rotate(-5deg);
+
+  box-shadow:
+    0 8px 20px
+    rgba(60,40,40,.15);
+
+  animation:
+    noteFloat
+    2s ease-in-out infinite;
+}
+
+@keyframes noteFloat{
+  50%{
+    transform:
+      rotate(3deg)
+      translateY(-6px);
+  }
+}
+
+/* =========================
+   HEART GAME
+========================= */
+
+.secret-card{
+  padding:32px;
+}
+
+.hearts{
+  display:grid;
+  grid-template-columns:
+    repeat(5,1fr);
+
+  gap:8px;
+  margin:25px 0;
+}
+
+.heart-button{
+  aspect-ratio:1;
+  padding:0;
+
+  background:white;
+
+  font-size:1.6rem;
+
+  box-shadow:
+    0 8px 20px
+    rgba(60,40,60,.09);
+}
+
+.heart-button.active{
+  background:#ffe1e9;
+
+  transform:
+    scale(1.08)
+    rotate(10deg);
+}
+
+.secret-message{
+  display:none;
+  padding:17px;
+
+  background:#302832;
+  color:white;
+
+  border-radius:18px;
+
+  line-height:1.6;
+}
+
+.secret-message.show{
+  display:block;
+  animation:
+    secretPop
+    .5s ease;
+}
+
+@keyframes secretPop{
+  from{
+    opacity:0;
+    transform:
+      scale(.9);
+  }
+
+  to{
+    opacity:1;
+    transform:
+      scale(1);
+  }
+}
+
+/* =========================
+   CERTIFICATE
+========================= */
+
+.certificate{
+  padding:
+    clamp(30px,6vw,60px);
+
+  text-align:center;
+}
+
+.stamp{
+  display:inline-block;
+  border:
+    3px solid #ff698e;
+
+  color:#ff5b84;
+
+  padding:
+    8px 14px;
+
+  border-radius:12px;
+
+  font-weight:950;
+  letter-spacing:.08em;
+
+  transform:
+    rotate(-4deg);
+}
+
+.certificate h2{
+  font-size:
+    clamp(2rem,5vw,3.5rem);
+
+  margin:
+    22px 0 12px;
+}
+
+.certificate p{
+  max-width:760px;
+  margin:auto;
+  line-height:1.75;
+  color:#6b5d68;
+}
+
+/* =========================
+   FUTURE POSTCARDS
+========================= */
+
+.postcards{
+  display:flex;
+  gap:15px;
+
+  overflow-x:auto;
+  scroll-snap-type:
+    x mandatory;
+
+  padding-bottom:15px;
+}
+
+.postcards::-webkit-scrollbar{
+  display:none;
+}
+
+.postcard{
+  min-width:
+    min(82vw,320px);
+
+  padding:28px;
+
+  scroll-snap-align:start;
+}
+
+.postcard small{
+  color:#a591a1;
+  font-weight:900;
+}
+
+.postcard h3{
+  font-size:1.35rem;
+  margin:20px 0 9px;
+}
+
+.postcard p{
+  color:#70636e;
+  line-height:1.6;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+  padding:
+    clamp(32px,6vw,68px);
+
+  position:relative;
+}
+
+.letter::after{
+  content:"💌";
+
+  position:absolute;
+  right:15px;
+  top:0;
+
+  font-size:7rem;
+  opacity:.1;
+}
+
+.letter p{
+  max-width:820px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(1.12rem,2vw,1.4rem);
+
+  line-height:1.9;
+
+  color:#514653;
+}
+
+.signature{
+  font-size:1.25rem;
+  font-weight:950;
+  margin-top:23px;
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+  position:fixed;
+  top:-30px;
+
+  width:10px;
+  height:16px;
+
+  border-radius:3px;
+
+  pointer-events:none;
+  z-index:9999;
+
+  animation:
+    confettiFall
+    2.5s linear forwards;
+}
+
+@keyframes confettiFall{
+  to{
+    transform:
+      translateY(110vh)
+      rotate(800deg);
+
+    opacity:.7;
+  }
+}
+
+/* =========================
+   FLYING KISSES
+========================= */
+
+.kiss{
+  position:fixed;
+  font-size:2rem;
+  z-index:9998;
+  pointer-events:none;
+
+  animation:
+    kissFly
+    1.5s ease-out forwards;
+}
+
+@keyframes kissFly{
+  to{
+    transform:
+      translateY(-130px)
+      scale(1.5)
+      rotate(20deg);
+
+    opacity:0;
+  }
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+  position:fixed;
+
+  left:50%;
+  bottom:25px;
+
+  transform:
+    translate(-50%,40px);
+
+  background:#2e2731;
+  color:white;
+
+  padding:
+    13px 18px;
+
+  border-radius:999px;
+
+  opacity:0;
+
+  pointer-events:none;
+
+  transition:.3s;
+
+  z-index:10000;
+
+  box-shadow:
+    0 18px 40px
+    rgba(40,30,40,.3);
+}
+
+.toast.show{
+  opacity:1;
+
+  transform:
+    translate(-50%,0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:750px){
+
+  section{
+    padding:55px 0;
+  }
+
+  .moods{
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .two-grid{
+    grid-template-columns:1fr;
+  }
+
+  .clock{
+    grid-template-columns:
+      1fr 1fr;
+  }
+}
+
+@media(max-width:450px){
+
+  .moods{
+    grid-template-columns:1fr;
+  }
+
+  .button-row{
+    flex-direction:column;
+  }
+
+  .button-row button,
+  .button-row .button{
+    width:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-orb orb1"></div>
+<div class="bg-orb orb2"></div>
+<div class="bg-orb orb3"></div>
+
+<div class="toast" id="toast">
+💛
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="card hero-card">
+
+<div class="small-title">
+A tiny corner of the internet made by Atul
+</div>
+
+<h1>
+Hey,
+<br>
+
+<span class="gradient-text">
+future Mrs. Prasad.
+</span>
+</h1>
+
+<p class="hero-text">
+
+This website contains exactly
+<strong>zero career lectures</strong>,
+zero “you should…”
+and absolutely no
+“where do you see yourself in five years?”
+
+<br><br>
+
+It has only one responsibility:
+
+<strong>
+making Ankita smile.
+</strong>
+
+</p>
+
+<div class="badge">
+
+🚫 No Gyaan Zone
+&nbsp; • &nbsp;
+💛 Unlimited Future-Husband Support
+
+</div>
+
+<div class="button-row">
+
+<a
+href="#countdown"
+class="button primary">
+
+Start the cute nonsense ✨
+
+</a>
+
+<button
+class="secondary"
+id="kissButton">
+
+Send me 25 virtual kisses 😘
+
+</button>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     COUNTDOWN
+========================= -->
+
+<section
+id="countdown"
+class="countdown-section">
+
+<div class="container">
+
+<h2 class="countdown-title">
+
+One countdown I actually care about. 💍
+
+</h2>
+
+<p class="countdown-subtitle">
+
+Until <strong>9 December 2026</strong> —
+when I officially get to call you my wife.
+
+</p>
+
+<div class="clock">
+
+<div class="time-box">
+<span
+class="time-number"
+id="days">
+00
+</span>
+
+<span class="time-label">
+Days
+</span>
+</div>
+
+
+<div class="time-box">
+<span
+class="time-number"
+id="hours">
+00
+</span>
+
+<span class="time-label">
+Hours
+</span>
+</div>
+
+
+<div class="time-box">
+<span
+class="time-number"
+id="minutes">
+00
+</span>
+
+<span class="time-label">
+Minutes
+</span>
+</div>
+
+
+<div class="time-box">
+<span
+class="time-number"
+id="seconds">
+00
+</span>
+
+<span class="time-label">
+Seconds
+</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- =========================
+     MOODS
+========================= -->
+
+<section id="mood">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Okay Ankita,
+what kind of day is it?
+
+</h2>
+
+<p class="section-subtitle">
+
+No explanation required.
+Just tap one.
+
+</p>
+
+<div class="moods">
+
+
+<div
+class="card mood-card"
+data-mood="foggy">
+
+<div class="mood-emoji">
+🌫️
+</div>
+
+<h3>
+I have no idea.
+</h3>
+
+<p>
+The future currently has
+the resolution of bad Wi-Fi.
+</p>
+
+</div>
+
+
+<div
+class="card mood-card"
+data-mood="hug">
+
+<div class="mood-emoji">
+🫂
+</div>
+
+<h3>
+Just hug me.
+</h3>
+
+<p>
+No solution.
+No advice.
+Only hug.
+</p>
+
+</div>
+
+
+<div
+class="card mood-card"
+data-mood="annoyed">
+
+<div class="mood-emoji">
+🫠
+</div>
+
+<h3>
+Everything is annoying.
+</h3>
+
+<p>
+Valid.
+Even this card may be annoying.
+</p>
+
+</div>
+
+
+<div
+class="card mood-card"
+data-mood="trying">
+
+<div class="mood-emoji">
+🦋
+</div>
+
+<h3>
+I'm scared but trying.
+</h3>
+
+<p>
+Soft heart.
+Big decision.
+Still showing up.
+</p>
+
+</div>
+
+</div>
+
+
+<div
+class="card mood-response"
+id="moodResponse">
+
+<div class="mood-response-title">
+
+Your mood can sit here
+without being fixed. 💛
+
+</div>
+
+<p class="mood-response-text">
+
+Choose anything above.
+This website refuses to become
+a motivational speaker.
+
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- =========================
+     INTERACTIVE AREA
+========================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Emergency smile department.
+</h2>
+
+<p class="section-subtitle">
+Future-husband certified.
+Scientifically questionable.
+</p>
+
+
+<div class="two-grid">
+
+
+<!-- NOTE JAR -->
+
+<div class="card jar-area">
+
+<div class="small-title">
+Open when life feels weird
+</div>
+
+<h2>
+The tiny-note jar
+</h2>
+
+<div
+class="jar"
+id="jar">
+
+<div
+class="jar-note"
+id="jarNote">
+
+Tap me ✨
+
+</div>
+
+</div>
+
+<p class="section-subtitle">
+
+Every tap gives you
+one little note from me.
+
+</p>
+
+</div>
+
+
+
+<!-- HEART GAME -->
+
+<div class="card secret-card">
+
+<div class="small-title">
+Secret mission
+</div>
+
+<h2>
+Catch all 5 hearts 💗
+</h2>
+
+<p class="section-subtitle">
+
+Because apparently your future husband
+made you a mini-game.
+
+</p>
+
+<div class="hearts">
+
+<button class="heart-button">
+💗
+</button>
+
+<button class="heart-button">
+💗
+</button>
+
+<button class="heart-button">
+💗
+</button>
+
+<button class="heart-button">
+💗
+</button>
+
+<button class="heart-button">
+💗
+</button>
+
+</div>
+
+
+<div
+class="secret-message"
+id="secretMessage">
+
+<strong>
+Secret unlocked:
+</strong>
+
+<br><br>
+
+I don't need you to have
+the whole future figured out.
+
+I only want the future
+to have <strong>you</strong> in it.
+
+The rest?
+
+We can be confused about
+together. 🤝💛
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- =========================
+     CERTIFICATE
+========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="card certificate">
+
+<div class="stamp">
+OFFICIALLY VALID
+</div>
+
+<h2>
+
+Certificate of Permission
+to Change Your Mind
+
+</h2>
+
+<p>
+
+This officially certifies that
+
+<strong>
+Ankita
+</strong>
+
+is fully allowed to resign,
+rethink,
+prepare,
+restart,
+pause,
+change direction,
+take a break,
+try something new,
+
+and still remain exactly the same
+amazing person Atul chose
+to spend his life with.
+
+<br><br>
+
+No explanation to the imaginary
+committee of people who think
+they know everybody's life plan
+is required.
+
+</p>
+
+<br><br>
+
+<button
+class="primary"
+id="certificateButton">
+
+Approve Certificate 🎉
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     POSTCARDS
+========================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Postcards from future-us.
+</h2>
+
+<p class="section-subtitle">
+
+Not predictions.
+Just possibilities worth smiling about.
+
+Swipe →
+
+</p>
+
+
+<div class="postcards">
+
+
+<div class="card postcard">
+
+<small>
+POSTCARD 01
+</small>
+
+<h3>
+A completely ordinary Tuesday
+</h3>
+
+<p>
+
+You're complaining about something.
+
+I'm pretending to listen
+while quietly stealing food
+from your plate.
+
+Everything feels
+wonderfully normal.
+
+</p>
+
+</div>
+
+
+
+<div class="card postcard">
+
+<small>
+POSTCARD 02
+</small>
+
+<h3>
+A result day
+</h3>
+
+<p>
+
+Good result or bad result,
+we order something unnecessary
+and analyse the entire situation
+like two dramatic consultants.
+
+</p>
+
+</div>
+
+
+
+<div class="card postcard">
+
+<small>
+POSTCARD 03
+</small>
+
+<h3>
+A new beginning
+</h3>
+
+<p>
+
+Maybe a government job.
+
+Maybe something unexpected.
+
+Maybe an entirely different plan.
+
+Life still moves,
+and somehow we still
+find something stupid to laugh about.
+
+</p>
+
+</div>
+
+
+
+<div class="card postcard">
+
+<small>
+POSTCARD 04
+</small>
+
+<h3>
+One “remember when?” night
+</h3>
+
+<p>
+
+We remember this phase
+and say:
+
+“Yaar we were so stressed.”
+
+Then laugh because
+somehow we made it through.
+
+</p>
+
+</div>
+
+
+
+<div class="card postcard">
+
+<small>
+POSTCARD 05
+</small>
+
+<h3>
+Home
+</h3>
+
+<p>
+
+Two cups.
+
+Too many cushions.
+
+One charger nobody can find.
+
+Food discussions.
+
+Inside jokes.
+
+And thousands of tiny routines
+that quietly became our life.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="card letter">
+
+<div class="small-title">
+One thing I actually mean
+</div>
+
+<h2 class="section-title">
+
+Ankita,
+you don't have to impress me
+with certainty.
+
+</h2>
+
+<p>
+
+I know this phase probably feels strange.
+
+You made a big career decision,
+and the next chapter isn't completely clear yet.
+
+But I am not here to tell you
+what the “correct” decision is.
+
+<br><br>
+
+I'm here because I like
+<strong>you</strong>.
+
+Not your designation.
+
+Not an exam result.
+
+Not your salary.
+
+Not a perfect five-year plan.
+
+You.
+
+<br><br>
+
+When you're excited,
+I'll celebrate with you.
+
+When you're doubtful,
+I'll sit beside you.
+
+When you're irritated,
+you can complain to me.
+
+And when you don't want
+to talk about careers at all,
+we'll happily discuss food,
+reels,
+random people,
+travel,
+or absolutely nothing.
+
+<br><br>
+
+One uncertain chapter
+isn't your whole story.
+
+And you definitely
+don't have to read
+the entire story tonight.
+
+</p>
+
+<div class="signature">
+
+— Your future husband,
+Atul 💛
+
+</div>
+
+
+<div class="button-row">
+
+<button
+class="primary"
+id="cuteButton">
+
+Okay, that was cute 🥹
+
+</button>
+
+<button
+class="secondary"
+id="dateButton">
+
+Give us a random mini-date 🎲
+
+</button>
+
+</div>
+
+
+<div
+id="dateResult"
+style="
+display:none;
+margin-top:18px;
+padding:17px;
+border-radius:17px;
+background:#fff6ca;
+font-weight:800;
+line-height:1.6;
+">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer
+style="
+text-align:center;
+padding:40px 20px 70px;
+color:#8a7c89;
+line-height:1.7;
+">
+
+Built with an unreasonable
+amount of affection.
+
+<br>
+
+<small>
+
+P.S. This website will never ask
+“Where do you see yourself
+in five years?”
+
+</small>
+
+</footer>
+
+
+
+<script>
+
+/* ==================================
+   COUNTDOWN
+   Wedding: 9 December 2026
+   India time
+================================== */
+
+const weddingDate =
+  new Date(
+    "2026-12-09T00:00:00+05:30"
+  ).getTime();
+
+
+function updateCountdown(){
+
+  const now =
+    new Date().getTime();
+
+  const distance =
+    weddingDate - now;
+
+
+  if(distance <= 0){
+
+    document.getElementById("days")
+      .textContent = "💍";
+
+    document.getElementById("hours")
+      .textContent = "WE";
+
+    document.getElementById("minutes")
+      .textContent = "DID";
+
+    document.getElementById("seconds")
+      .textContent = "IT";
+
+    return;
+  }
+
+
+  const days =
+    Math.floor(
+      distance /
+      (1000 * 60 * 60 * 24)
+    );
+
+
+  const hours =
+    Math.floor(
+      (
+        distance %
+        (1000 * 60 * 60 * 24)
+      ) /
+      (1000 * 60 * 60)
+    );
+
+
+  const minutes =
+    Math.floor(
+      (
+        distance %
+        (1000 * 60 * 60)
+      ) /
+      (1000 * 60)
+    );
+
+
+  const seconds =
+    Math.floor(
+      (
+        distance %
+        (1000 * 60)
+      ) /
+      1000
+    );
+
+
+  document.getElementById("days")
+    .textContent = days;
+
+  document.getElementById("hours")
+    .textContent =
+      String(hours).padStart(2,"0");
+
+  document.getElementById("minutes")
+    .textContent =
+      String(minutes).padStart(2,"0");
+
+  document.getElementById("seconds")
+    .textContent =
+      String(seconds).padStart(2,"0");
+}
+
+
+updateCountdown();
+
+setInterval(
+  updateCountdown,
+  1000
+);
+
+
+
+/* ==================================
+   MOODS
+================================== */
+
+const moods = {
+
+  foggy:{
+
+    title:
+    "Then today can stay blurry. 🌫️",
+
+    text:
+    "No need to solve the whole future tonight. We can solve a much more important problem instead: chai, coffee, or something unnecessarily spicy?"
+
+  },
+
+
+  hug:{
+
+    title:
+    "🫂 Virtual hug activated.",
+
+    text:
+    "No advice attached. No hidden motivational quote. Just one long quiet hug from your future husband — plus another one because the first was obviously too short."
+
+  },
+
+
+  annoyed:{
+
+    title:
+    "Official diagnosis: everything is irritating. 🫠",
+
+    text:
+    "Treatment plan: complain freely, judge random reels, eat something nice, and postpone being sensible until further notice."
+
+  },
+
+
+  trying:{
+
+    title:
+    "Scared and trying can exist together. 🦋",
+
+    text:
+    "You don't have to feel fearless for me to see how much courage this phase took. Being confused does not cancel out being brave."
+
+  }
+
+};
+
+
+document
+.querySelectorAll(
+  ".mood-card"
+)
+.forEach(card=>{
+
+  card.addEventListener(
+    "click",
+    ()=>{
+
+      const mood =
+        moods[
+          card.dataset.mood
+        ];
+
+      const box =
+        document.getElementById(
+          "moodResponse"
+        );
+
+
+      box.innerHTML = `
+
+      <div class="mood-response-title">
+      ${mood.title}
+      </div>
+
+      <p class="mood-response-text">
+      ${mood.text}
+      </p>
+
+      `;
+
+
+      littleConfetti(10);
+
+    }
+  );
+
+});
+
+
+
+/* ==================================
+   NOTE JAR
+================================== */
+
+const notes = [
+
+"Your current status: loved. Extremely. 💛",
+
+"Please report immediately for one hug.",
+
+"Today’s task: exist. Bonus points for snacks.",
+
+"You are still you. Job title not required.",
+
+"Tiny reminder: I chose you, not your LinkedIn headline.",
+
+"You are officially allowed to have a weird day.",
+
+"Plot twist: confusion is not a permanent address.",
+
+"Future husband available for overthinking interruption services.",
+
+"No exam can measure how cute you are. Very flawed system.",
+
+"One day we will laugh at how dramatic this phase felt.",
+
+"You don't need to earn rest.",
+
+"Today's breaking news: Atul still loves Ankita. More at 9."
+
+];
+
+
+document
+.getElementById("jar")
+.addEventListener(
+  "click",
+  ()=>{
+
+    const note =
+      notes[
+        Math.floor(
+          Math.random()
+          *
+          notes.length
+        )
+      ];
+
+
+    const noteElement =
+      document.getElementById(
+        "jarNote"
+      );
+
+
+    noteElement.textContent =
+      note;
+
+
+    noteElement.style.transform =
+      `
+      rotate(
+        ${
+          Math.floor(
+            Math.random()*10
+          ) - 5
+        }deg
+      )
+      `;
+
+
+    littleConfetti(7);
+
+  }
+);
+
+
+
+/* ==================================
+   HEART GAME
+================================== */
+
+let heartsFound = 0;
+
+
+document
+.querySelectorAll(
+  ".heart-button"
+)
+.forEach(button=>{
+
+  button.addEventListener(
+    "click",
+    ()=>{
+
+      if(
+        button.classList
+        .contains("active")
+      ){
+        return;
+      }
+
+
+      button.classList
+      .add("active");
+
+      button.textContent =
+        "💖";
+
+      heartsFound++;
+
+
+      if(heartsFound === 5){
+
+        document
+        .getElementById(
+          "secretMessage"
+        )
+        .classList
+        .add("show");
+
+
+        celebrate();
+
+      }
+
+    }
+  );
+
+});
+
+
+
+/* ==================================
+   KISS STORM
+================================== */
+
+document
+.getElementById(
+  "kissButton"
+)
+.addEventListener(
+  "click",
+  ()=>{
+
+    const emojis =
+      [
+        "😘",
+        "💋",
+        "💗",
+        "🥰",
+        "💛"
+      ];
+
+
+    for(
+      let i=0;
+      i<25;
+      i++
+    ){
+
+      const kiss =
+        document.createElement(
+          "div"
+        );
+
+
+      kiss.className =
+        "kiss";
+
+
+      kiss.textContent =
+        emojis[
+          Math.floor(
+            Math.random()
+            *
+            emojis.length
+          )
+        ];
+
+
+      kiss.style.left =
+        (
+          5 +
+          Math.random()*90
+        )
+        +
+        "vw";
+
+
+      kiss.style.top =
+        (
+          20 +
+          Math.random()*65
+        )
+        +
+        "vh";
+
+
+      kiss.style.animationDelay =
+        Math.random()*.6
+        +
+        "s";
+
+
+      document.body
+      .appendChild(kiss);
+
+
+      setTimeout(
+        ()=>kiss.remove(),
+        2200
+      );
+
+    }
+
+
+    showToast(
+      "25 kisses successfully dispatched 😘"
+    );
+
+
+    playChime();
+
+  }
+);
+
+
+
+/* ==================================
+   CONFETTI
+================================== */
+
+function littleConfetti(amount){
+
+  const colors =
+  [
+    "#ff6f91",
+    "#ffb38a",
+    "#bca7ff",
+    "#ffd977",
+    "#9bd7c7"
+  ];
+
+
+  for(
+    let i=0;
+    i<amount;
+    i++
+  ){
+
+    const piece =
+      document.createElement(
+        "div"
+      );
+
+
+    piece.className =
+      "confetti";
+
+
+    piece.style.left =
+      Math.random()*100
+      +
+      "vw";
+
+
+    piece.style.background =
+      colors[
+        Math.floor(
+          Math.random()
+          *
+          colors.length
+        )
+      ];
+
+
+    piece.style.animationDelay =
+      Math.random()*.5
+      +
+      "s";
+
+
+    document.body
+    .appendChild(piece);
+
+
+    setTimeout(
+      ()=>piece.remove(),
+      3000
+    );
+
+  }
+
+}
+
+
+function celebrate(){
+
+  littleConfetti(60);
+
+  showToast(
+    "Approved. Ankita remains extremely loved. 💛"
+  );
+
+  playChime();
+
+}
+
+
+
+document
+.getElementById(
+  "certificateButton"
+)
+.addEventListener(
+  "click",
+  celebrate
+);
+
+
+
+document
+.getElementById(
+  "cuteButton"
+)
+.addEventListener(
+  "click",
+  celebrate
+);
+
+
+
+/* ==================================
+   RANDOM MINI DATE
+================================== */
+
+const dateIdeas = [
+
+"☕ No-phone chai date: 30 minutes, one chai each, and career discussion is officially banned.",
+
+"🍕 Mystery food date: one person chooses the place, the other chooses dessert.",
+
+"🎬 Terrible movie night: deliberately choose a badly rated movie and review it like professional critics.",
+
+"🚶 Memory walk: go for a short walk and each tell one memory the other person might have forgotten.",
+
+"📸 Photo challenge: take five intentionally ridiculous couple photos.",
+
+"🌮 ₹500 challenge: buy the funniest combination of snacks possible and rate everything out of 10.",
+
+"🎵 Music night: each person plays three songs that remind them of the other.",
+
+"🌙 Late-night terrace/balcony date with chai and absolutely no discussion about exams."
+
+];
+
+
+document
+.getElementById(
+  "dateButton"
+)
+.addEventListener(
+  "click",
+  ()=>{
+
+    const idea =
+      dateIdeas[
+        Math.floor(
+          Math.random()
+          *
+          dateIdeas.length
+        )
+      ];
+
+
+    const box =
+      document.getElementById(
+        "dateResult"
+      );
+
+
+    box.style.display =
+      "block";
+
+
+    box.textContent =
+      idea;
+
+
+    littleConfetti(8);
+
+  }
+);
+
+
+
+/* ==================================
+   TOAST
+================================== */
+
+function showToast(message){
+
+  const toast =
+    document.getElementById(
+      "toast"
+    );
+
+
+  toast.textContent =
+    message;
+
+
+  toast.classList
+  .add("show");
+
+
+  clearTimeout(
+    window.toastTimer
+  );
+
+
+  window.toastTimer =
+    setTimeout(
+      ()=>{
+        toast.classList
+        .remove("show");
+      },
+      2200
+    );
+
+}
+
+
+
+/* ==================================
+   LITTLE CHIME
+================================== */
+
+function playChime(){
+
+  try{
+
+    const AudioContext =
+      window.AudioContext
+      ||
+      window.webkitAudioContext;
+
+
+    const context =
+      new AudioContext();
+
+
+    const frequencies =
+      [
+        659.25,
+        783.99,
+        987.77
+      ];
+
+
+    frequencies
+    .forEach(
+      (frequency,index)=>{
+
+        const oscillator =
+          context.createOscillator();
+
+        const gain =
+          context.createGain();
+
+
+        const start =
+          context.currentTime
+          +
+          index*.08;
+
+
+        oscillator.frequency.value =
+          frequency;
+
+        oscillator.type =
+          "sine";
+
+
+        gain.gain
+        .setValueAtTime(
+          .001,
+          start
+        );
+
+
+        gain.gain
+        .exponentialRampToValueAtTime(
+          .12,
+          start+.03
+        );
+
+
+        gain.gain
+        .exponentialRampToValueAtTime(
+          .001,
+          start+.35
+        );
+
+
+        oscillator
+        .connect(gain);
+
+        gain
+        .connect(
+          context.destination
+        );
+
+
+        oscillator
+        .start(start);
+
+        oscillator
+        .stop(start+.38);
+
+      }
+    );
+
+  }
+  catch(error){
+
+    /* Audio is optional */
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
